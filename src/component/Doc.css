@@ -1,0 +1,26 @@
+.mainComp{
+    text-align: center;
+}
+.doc-align{
+    display: flex;
+    margin-top: 20px;
+    justify-content: space-around;
+
+}
+.thum-top{
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    font-weight: bold;
+}
+.document-thumbnail{
+  width: 200px;  
+  border: .1px solid grey;
+  border-radius: 5px;
+  padding: 8px;
+  height: 70px;
+}
+.for-btn button{
+    border: none;
+    background-color: transparent;
+}   

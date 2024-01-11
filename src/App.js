@@ -1,23 +1,19 @@
-import logo from './logo.svg';
 import './App.css';
-
+import Doc from './component/Doc';
+import Type from './component/Type';
+import {app,dataStore} from './component/firebase'
+import { Routes,Route } from 'react-router-dom';
+import { useState } from 'react';
 function App() {
+  
+  const [tryed,setTry] = useState('')
+  // console.log(tryed);
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <Routes>
+      <Route path='/'  element={<Doc dataStore={dataStore} tryed={tryed} setTry={setTry} />} ></Route>
+      <Route path='/type/:id' element={<Type dataStore={dataStore} tryed={tryed} />} ></Route>
+    </Routes>
     </div>
   );
 }
